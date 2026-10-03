@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamesHub</title>
+    <style>
+      :root {
+        --bg-color: #0f172a;
+        --card-bg: #1e293b;
+        --text-color: #f8fafc;
+        --text-muted: #94a3b8;
+        --accent-minecraft: #22c55e;
+        --accent-gd: #38bdf8;
+        --hover-shadow: rgba(0, 0, 0, 0.4);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        background: linear-gradient(to right, #38bdf8, #818cf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p.subtitle {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      .game-card {
+        background-color: var(--card-bg);
+        border-radius: 16px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 10px 25px var(--hover-shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .game-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 35px var(--hover-shadow);
+      }
+
+      .game-info h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .game-info p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+        line-height: 1.5;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #ffffff;
+        transition: opacity 0.2s ease;
+      }
+
+      .btn:hover {
+        opacity: 0.9;
+      }
+
+      .btn-minecraft {
+        background-color: var(--accent-minecraft);
+      }
+
+      .btn-gd {
+        background-color: var(--accent-gd);
+        color: #0f172a;
+      }
+
+      footer {
+        margin-top: auto;
+        padding-top: 40px;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>GamesHub</h1>
+      <p class="subtitle">Play your favorite games anywhere, anytime.</p>
+    </header>
+    <div class="container">
+      <!-- Minecraft Card -->
+      <div class="game-card">
+        <div class="game-info">
+          <h2>Minecraft</h2>
+          <p>Dive into an infinite blocky world where you can build, explore, and survive.</p>
+        </div>
+        <a href="https://bruhboyofficial.github.io/ClassroomBruh" class="btn btn-minecraft" target="_blank" rel="noopener noreferrer">Play Minecraft</a>
+      </div>
+      <!-- Geometry Dash (Scratch) Card -->
+      <div class="game-card">
+        <div class="game-info">
+          <h2>Geometry Dash (Scratch)</h2>
+          <p>Experience a fun block-based Scratch recreation of the classic rhythm platformer.</p>
+        </div>
+        <a href="https://bruhboyofficial.github.io/Quizizz" class="btn btn-gd" target="_blank" rel="noopener noreferrer">Play Geometry Dash</a>
+      </div>
+      <!-- Geometry Dash Web Demo Card -->
+      <div class="game-card">
+        <div class="game-info">
+          <h2>Geometry Dash Web Demo</h2>
+          <p>Test your reflexes with this web-optimized demo version of Geometry Dash.</p>
+        </div>
+        <a href="https://bruhboyofficial.github.io/Quizlet/" class="btn btn-gd" target="_blank" rel="noopener noreferrer">Play Web Demo</a>
+      </div>
+      <!-- GD Wave Card -->
+      <div class="game-card">
+        <div class="game-info">
+          <h2>GD Wave</h2>
+          <p>Master tight squeezes and sharp turns in this dedicated wave-mode challenge.</p>
+        </div>
+        <a href="https://sites.google.com/view/drive-u-7-home/new-games/level-67?authuser=0" class="btn btn-gd" target="_blank" rel="noopener noreferrer">Play GD Wave</a>
+      </div>
+      <!-- Bit Nibbler Card -->
+      <div class="game-card">
+        <div class="game-info">
+          <h2>Bit Nibbler</h2>
+          <p>Dive into action with Bit Nibbler in this quick-access web arcade experience.</p>
+        </div>
+        <a href="https://tinyurl.com/BitNibblerGame" class="btn btn-gd" target="_blank" rel="noopener noreferrer">Play Bit Nibbler</a>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2026 GamesHub. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
